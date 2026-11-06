@@ -1,0 +1,1266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Inside Track is a digital journalism museum preserving the history of journalism from 1993 to 2026.">
+
+<title>Inside Track | Digital Journalism Museum</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+:root {
+    --white: #FFFFFF;
+    --black: #151515;
+    --grey: #D9D9D9;
+    --light-grey: #F5F5F3;
+    --red: #A51F2B;
+    --text-grey: #666666;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    background: var(--black);
+    color: var(--white);
+    padding: 9px 0;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--grey);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 37px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.logo p {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-grey);
+    margin-top: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+.nav-cta {
+    background: var(--red);
+    color: var(--white);
+    padding: 12px 18px;
+}
+
+.nav-cta:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    background: var(--light-grey);
+    padding: 90px 0;
+    border-bottom: 1px solid var(--grey);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.eyebrow {
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.12;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: var(--red);
+}
+
+.hero-description {
+    color: var(--text-grey);
+    font-size: 15px;
+    max-width: 530px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--red);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--black);
+}
+
+.btn-outline {
+    border: 1px solid var(--black);
+}
+
+.btn-outline:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.hero-image {
+    min-height: 390px;
+    background:
+    linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.25)),
+    url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=85')
+    center/cover;
+    position: relative;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    background: var(--black);
+    color: var(--white);
+    padding: 15px 20px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+    padding: 35px 0;
+    border-bottom: 1px solid var(--grey);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 20px;
+}
+
+.stat-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: var(--red);
+}
+
+.stat-item p {
+    font-size: 11px;
+    color: var(--text-grey);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+}
+
+.section-heading p {
+    color: var(--text-grey);
+    font-size: 13px;
+    max-width: 450px;
+}
+
+.section-label {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FEATURED STORIES
+========================= */
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 25px;
+}
+
+.story-card {
+    border: 1px solid var(--grey);
+    transition: 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-image {
+    height: 210px;
+    background-position: center;
+    background-size: cover;
+}
+
+.story-one {
+    background-image: url('https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=80');
+}
+
+.story-two {
+    background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80');
+}
+
+.story-three {
+    background-image: url('https://images.unsplash.com/photo-1503694978374-8a2fa686963a?auto=format&fit=crop&w=900&q=80');
+}
+
+.story-content {
+    padding: 22px;
+}
+
+.story-content small {
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+.story-content p {
+    color: var(--text-grey);
+    font-size: 12px;
+}
+
+/* =========================
+   ARCHIVE SECTION
+========================= */
+
+.archive-section {
+    background: var(--black);
+    color: var(--white);
+}
+
+.archive-section .section-heading p {
+    color: #BBBBBB;
+}
+
+.archive-section .section-label {
+    color: #D98B91;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.archive-year {
+    border: 1px solid #444;
+    padding: 25px 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.archive-year:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.archive-year h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.archive-year p {
+    color: #BBBBBB;
+    font-size: 10px;
+}
+
+/* =========================
+   JOURNALIST PROFILES
+========================= */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.profile-card {
+    border-bottom: 2px solid var(--grey);
+    padding-bottom: 20px;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    margin-bottom: 18px;
+}
+
+.profile-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+}
+
+.profile-card p {
+    font-size: 12px;
+    color: var(--text-grey);
+}
+
+/* =========================
+   MULTIMEDIA EXHIBITIONS
+========================= */
+
+.exhibitions {
+    background: var(--light-grey);
+}
+
+.exhibition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.exhibition-card {
+    background: var(--white);
+}
+
+.exhibition-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.exhibition-content {
+    padding: 22px;
+}
+
+.exhibition-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.exhibition-content p {
+    font-size: 12px;
+    color: var(--text-grey);
+}
+
+/* =========================
+   RESEARCH SECTION
+========================= */
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.research-card {
+    border: 1px solid var(--grey);
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.research-card:hover {
+    border-color: var(--red);
+}
+
+.research-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin: 15px 0;
+}
+
+.research-card p {
+    font-size: 12px;
+    color: var(--text-grey);
+}
+
+.research-icon {
+    color: var(--red);
+    font-size: 28px;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    background: var(--light-grey);
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 60px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+}
+
+.footer-logo span {
+    color: var(--red);
+}
+
+.footer-about {
+    color: #AAAAAA;
+    font-size: 12px;
+    max-width: 300px;
+    margin-top: 15px;
+}
+
+.footer-column h4 {
+    font-size: 12px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-column a {
+    display: block;
+    color: #AAAAAA;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #AAAAAA;
+    font-size: 11px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .story-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .archive-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .profile-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar-content span:last-child {
+        display: none;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 12px 0;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        min-height: 270px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .story-grid,
+    .exhibition-grid,
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .profile-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-card img {
+        height: 200px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .archive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* MUSEUM SEARCH */
+
+#archiveSearch {
+    width: 100%;
+    max-width: 650px;
+    padding: 17px 20px;
+    margin: 25px 0;
+    border: 1px solid #D9D9D9;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+}
+
+#archiveSearch:focus {
+    border-color: #A51F2B;
+}
+
+.search-result {
+    padding: 18px;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.search-result h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+.search-result p {
+    color: #666666;
+    font-size: 12px;
+}
+
+
+
+/* Theme palette override */
+:root {
+    --white: #F7F3EC;
+    --black: #342821;
+    --grey: #D8CFC3;
+    --light: #EEE6DA;
+    --light-grey: #EEE6DA;
+    --red: #9B5D45;
+    --muted: #76685D;
+    --text-grey: #76685D;
+    --surface: #FFFCF7;
+    --accent-soft: #E8D6C8;
+}
+</style>
+    <link rel="stylesheet" href="theme-switcher.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <span>Preserving Journalism • 1993–2026</span>
+        <span>A Digital Museum of Journalism</span>
+    </div>
+</div>
+
+<!-- HEADER -->
+
+<header>
+    <div class="container header-content">
+
+        <a href="#home" class="logo">
+            <h1>Inside <span>Track.</span></h1>
+            <p>Digital Journalism Museum</p>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="archive.html">Archive</a>	
+            <a href="journalists.html">Journalists</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="research.html">Research</a>
+            <a href="#about">About</a>
+            <a href="#archive" class="nav-cta">Explore Museum</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+
+        <div>
+            <div class="eyebrow">The History of Journalism • 1993–2026</div>
+
+            <h2>
+                Every Story Has a History.
+                <span>Every Journalist Has a Legacy.</span>
+            </h2>
+
+            <p class="hero-description">
+                Welcome to Inside Track, a digital journalism museum
+                dedicated to preserving important reports, documenting
+                influential journalists, and exploring the stories that
+                shaped our world.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="archive.html" class="btn btn-primary">
+                    Explore the Archive
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    Discover Our Mission
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-caption">
+                THE HISTORY OF JOURNALISM — PRESERVED
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- STATISTICS -->
+
+<section class="stats">
+    <div class="container stats-grid">
+
+        <div class="stat-item">
+            <h3>1993</h3>
+            <p>Archive Begins</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>2026</h3>
+            <p>Historical Coverage Ends</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>33+</h3>
+            <p>Years of Journalism</p>
+        </div>
+
+        <div class="stat-item">
+            <h3>∞</h3>
+            <p>Stories Worth Preserving</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FEATURED STORIES -->
+
+
+<section class="section" id="museum-search">
+
+    <div class="container">
+
+        <div class="section-label">
+            Search the Collection
+        </div>
+
+        <h2>Explore Journalism History</h2>
+
+        <input
+            type="search"
+            id="archiveSearch"
+            placeholder="Search by year, topic or keyword..."
+            aria-label="Search historical archive"
+        >
+
+        <div id="searchResults"></div>
+
+    </div>
+
+</section>
+
+<section class="section" id="featured">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <div class="section-label">Museum Highlights</div>
+                <h2>Featured Stories</h2>
+            </div>
+
+            <p>
+                Explore significant reporting, investigations and
+                historical moments from the world of journalism.
+            </p>
+        </div>
+
+        <div class="story-grid">
+
+            <article class="story-card">
+                <div class="story-image story-one"></div>
+                <div class="story-content">
+                    <small>Investigative Journalism</small>
+                    <h3>When Journalism Changed the Conversation</h3>
+                    <p>
+                        Discover the reporting that challenged
+                        institutions and brought important issues
+                        into public discussion.
+                    </p>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <div class="story-image story-two"></div>
+                <div class="story-content">
+                    <small>Journalism History</small>
+                    <h3>The Evolution of the Newsroom</h3>
+                    <p>
+                        Explore how journalism and reporting practices
+                        evolved over three decades.
+                    </p>
+                </div>
+            </article>
+
+            <article class="story-card">
+                <div class="story-image story-three"></div>
+                <div class="story-content">
+                    <small>Media & Society</small>
+                    <h3>Stories That Shaped Public Memory</h3>
+                    <p>
+                        Revisit reporting that became part of
+                        our collective historical record.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ARCHIVE -->
+
+<section class="section archive-section" id="archive">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <div class="section-label">Historical Collection</div>
+                <h2>Explore the Archive</h2>
+            </div>
+
+            <p>
+                Travel through the history of journalism.
+                Explore the archive by year and discover
+                significant reports and events.
+            </p>
+        </div>
+
+        <div class="archive-grid">
+
+            <a href="#research" class="archive-year"><h3>1993</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>1994</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>1995</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>1996</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>1997</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>1998</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>1999</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2000</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2001</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2002</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2003</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2004</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2005</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2006</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2007</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2008</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2009</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2010</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2011</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2012</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2013</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2014</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2015</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2016</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2017</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2018</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2019</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2020</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2021</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2022</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2023</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2024</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2025</h3><p>Explore Year</p></a>
+            <a href="#research" class="archive-year"><h3>2026</h3><p>Explore Year</p></a>
+
+        </div>
+    </div>
+</section>
+
+<!-- JOURNALISTS -->
+
+<section class="section" id="journalists">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <div class="section-label">People Behind the Stories</div>
+                <h2>Journalist Profiles</h2>
+            </div>
+
+            <p>
+                Discover the careers, contributions and professional
+                journeys of influential journalists.
+            </p>
+        </div>
+
+        <div class="profile-grid">
+
+            <article class="profile-card">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Journalist profile placeholder">
+                <h3>Journalist Profile 01</h3>
+                <p>Investigative Journalism</p>
+            </article>
+
+            <article class="profile-card">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Journalist profile placeholder">
+                <h3>Journalist Profile 02</h3>
+                <p>Political Reporting</p>
+            </article>
+
+            <article class="profile-card">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80" alt="Journalist profile placeholder">
+                <h3>Journalist Profile 03</h3>
+                <p>International Journalism</p>
+            </article>
+
+            <article class="profile-card">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Journalist profile placeholder">
+                <h3>Journalist Profile 04</h3>
+                <p>Documentary Reporting</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXHIBITIONS -->
+
+<section class="section exhibitions" id="exhibitions">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <div class="section-label">Visual History</div>
+                <h2>Multimedia Exhibitions</h2>
+            </div>
+
+            <p>
+                Experience journalism through photographs,
+                historical documents, videos and audio archives.
+            </p>
+        </div>
+
+        <div class="exhibition-grid">
+
+            <article class="exhibition-card">
+                <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=900&q=80" alt="Historical photography exhibition">
+                <div class="exhibition-content">
+                    <h3>Photography Archives</h3>
+                    <p>Photographs documenting important moments in journalism history.</p>
+                </div>
+            </article>
+
+            <article class="exhibition-card">
+                <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=80" alt="Video documentary exhibition">
+                <div class="exhibition-content">
+                    <h3>Documentary Collection</h3>
+                    <p>Visual storytelling, documentaries and historical recordings.</p>
+                </div>
+            </article>
+
+            <article class="exhibition-card">
+                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="Historical documents exhibition">
+                <div class="exhibition-content">
+                    <h3>Original Documents</h3>
+                    <p>Preserved reports, publications and historical records.</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- RESEARCH -->
+
+<section class="section" id="research">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <div class="section-label">Knowledge & Discovery</div>
+                <h2>Research Resources</h2>
+            </div>
+
+            <p>
+                A dedicated space for students, historians,
+                researchers and media professionals.
+            </p>
+        </div>
+
+        <div class="research-grid">
+
+            <article class="research-card">
+                <div class="research-icon">01</div>
+                <h3>Historical Documents</h3>
+                <p>
+                    Access preserved reports, articles,
+                    publications and historical records.
+                </p>
+            </article>
+
+            <article class="research-card">
+                <div class="research-icon">02</div>
+                <h3>Research Collections</h3>
+                <p>
+                    Explore curated collections covering
+                    journalism movements and historical events.
+                </p>
+            </article>
+
+            <article class="research-card">
+                <div class="research-icon">03</div>
+                <h3>Educational Resources</h3>
+                <p>
+                    Discover resources for academic research,
+                    media studies and journalism education.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+    <div class="container about-content">
+
+        <div class="section-label">Our Mission</div>
+
+        <h2>Preserving the Stories That Matter.</h2>
+
+        <p>
+            Founded by Meetu Jain, Inside Track is envisioned as a
+            digital museum dedicated to preserving the history,
+            evolution and impact of journalism from 1993 to 2026.
+
+            Through historical archives, journalist profiles,
+            multimedia exhibitions and research collections,
+            Inside Track aims to make journalism's legacy
+            accessible to future generations.
+        </p>
+
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <div class="footer-logo">
+                    Inside <span>Track.</span>
+                </div>
+
+                <p class="footer-about">
+                    A digital museum preserving the history
+                    and legacy of journalism from 1993 to 2026.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <a href="#archive">Historical Archive</a>
+                <a href="#journalists">Journalists</a>
+                <a href="#exhibitions">Exhibitions</a>
+                <a href="#research">Research</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Information</h4>
+                <a href="#about">About Us</a>
+                <a href="#about">Our Mission</a>
+                <a href="#about">Our Vision</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="#research">Documents</a>
+                <a href="#research">Collections</a>
+                <a href="#research">Educational Resources</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© 2026 Inside Track. All Rights Reserved.</span>
+            <span>Founded by Meetu Jain | Digital Journalism Museum</span>
+        </div>
+
+    </div>
+</footer>
+<script src="script.js" defer></script>
+
+    <script src="theme-switcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore historical journalism photographs, newspapers, documentaries, audio interviews and documents at Inside Track.">
+
+    <title>Multimedia Exhibitions | Inside Track</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="exhibitions.css">
+
+    <script src="exhibitions.js" defer></script>
+    <link rel="stylesheet" href="theme-switcher.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <div class="container topbar-inner">
+
+            <span>INSIDE TRACK | DIGITAL JOURNALISM MUSEUM</span>
+
+            <span>MULTIMEDIA COLLECTION | 1993–2026</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+
+                Inside <span>Track.</span>
+
+                <small>DIGITAL JOURNALISM MUSEUM</small>
+
+            </a>
+
+            <nav aria-label="Main navigation">
+
+                <a href="index.html">Home</a>
+            <a href="archive.html">Archive</a>	
+            <a href="journalists.html">Journalists</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="research.html">Research</a>
+                <a href="index.html#about">About</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section class="exhibition-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    THE VISUAL HISTORY OF JOURNALISM
+                </p>
+
+                <h1>
+                    Journalism Through<br>
+                    <span>Every Frame.</span>
+                </h1>
+
+                <p class="hero-description">
+
+                    Explore the history of journalism through
+                    photographs, newspaper collections,
+                    documentaries, audio interviews and
+                    historical documents.
+
+                </p>
+
+                <a href="#collections" class="primary-button">
+                    Explore Exhibitions
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLLECTION STATISTICS -->
+
+        <section class="collection-stats">
+
+            <div class="container stats-grid">
+
+                <div>
+                    <h2>01</h2>
+                    <p>Photography Gallery</p>
+                </div>
+
+                <div>
+                    <h2>02</h2>
+                    <p>Newspaper Collection</p>
+                </div>
+
+                <div>
+                    <h2>03</h2>
+                    <p>Documentary Library</p>
+                </div>
+
+                <div>
+                    <h2>04</h2>
+                    <p>Historical Documents</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="exhibition-intro">
+
+            <div class="container intro-grid">
+
+                <div>
+
+                    <p class="eyebrow">
+                        INSIDE THE COLLECTION
+                    </p>
+
+                    <h2>
+                        More Than Words.<br>
+                        A History to Experience.
+                    </h2>
+
+                </div>
+
+                <p>
+
+                    Journalism is not preserved through written
+                    stories alone. Photographs, recorded voices,
+                    original publications and documentary footage
+                    help future generations understand the events
+                    and people behind the headlines.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- COLLECTIONS -->
+
+        <section class="collections-section" id="collections">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        EXPLORE THE MUSEUM
+                    </p>
+
+                    <h2>Multimedia Collections</h2>
+
+                    <p>
+                        Discover the different forms of historical
+                        journalism preserved by Inside Track.
+                    </p>
+
+                </div>
+
+
+                <!-- CATEGORY BUTTONS -->
+
+                <div class="category-tabs">
+
+                    <button class="category-button active"
+                        data-category="all">
+                        All Collections
+                    </button>
+
+                    <button class="category-button"
+                        data-category="photography">
+                        Photography
+                    </button>
+
+                    <button class="category-button"
+                        data-category="newspapers">
+                        Newspapers
+                    </button>
+
+                    <button class="category-button"
+                        data-category="documentaries">
+                        Documentaries
+                    </button>
+
+                    <button class="category-button"
+                        data-category="audio">
+                        Audio
+                    </button>
+
+                    <button class="category-button"
+                        data-category="documents">
+                        Documents
+                    </button>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="exhibition-search">
+
+                    <input
+                        type="search"
+                        id="exhibitionSearch"
+                        placeholder="Search exhibitions, topics or years..."
+                        aria-label="Search multimedia exhibitions"
+                    >
+
+                    <select id="yearFilter"
+                        aria-label="Filter exhibitions by year">
+
+                        <option value="all">All Years</option>
+
+                        <option value="1993">1993–1999</option>
+
+                        <option value="2000">2000–2009</option>
+
+                        <option value="2010">2010–2019</option>
+
+                        <option value="2020">2020–2026</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- EXHIBITION GRID -->
+
+                <div class="exhibition-grid"
+                    id="exhibitionGrid">
+
+                    <!-- Cards generated by JavaScript -->
+
+                </div>
+
+
+                <!-- EMPTY MESSAGE -->
+
+                <div class="empty-message"
+                    id="emptyMessage" hidden>
+
+                    <h3>No Exhibitions Found</h3>
+
+                    <p>
+                        Try another search term or collection category.
+                    </p>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="pagination" id="pagination">
+
+                    <button id="previousPage" disabled>
+                        Previous
+                    </button>
+
+                    <span id="pageNumber">Page 1</span>
+
+                    <button id="nextPage">
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURED EXHIBITION -->
+
+        <section class="featured-exhibition">
+
+            <div class="container featured-grid">
+
+                <div class="featured-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=85"
+                        alt="Newspaper collection exhibition"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="featured-content">
+
+                    <p class="eyebrow">
+                        FEATURED COLLECTION
+                    </p>
+
+                    <h2>
+                        The Newspaper.<br>
+                        The Story.<br>
+                        The History.
+                    </h2>
+
+                    <p>
+
+                        Newspapers provide a valuable record
+                        of how events were reported, understood
+                        and presented to the public.
+
+                        Inside Track aims to preserve historical
+                        publications and their journalistic context.
+
+                    </p>
+
+                    <a href="#collections" class="primary-button">
+                        Explore Collections
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARCHIVAL STANDARDS -->
+
+        <section class="preservation-section">
+
+            <div class="container preservation-content">
+
+                <p class="eyebrow">
+                    OUR PRESERVATION STANDARDS
+                </p>
+
+                <h2>
+                    Every Image Has a Context.<br>
+                    Every Record Has a Source.
+                </h2>
+
+                <p>
+
+                    Each multimedia exhibition should include
+                    its original source, publication details,
+                    date, creator information and copyright
+                    or usage status wherever available.
+
+                    Historical accuracy and responsible
+                    preservation are central to Inside Track.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- EXHIBITION MODAL -->
+
+    <dialog id="exhibitionModal"
+        class="exhibition-modal">
+
+        <div class="modal-header">
+
+            <span class="eyebrow">
+                MUSEUM EXHIBITION
+            </span>
+
+            <button id="closeExhibition"
+                aria-label="Close exhibition">
+                &times;
+            </button>
+
+        </div>
+
+        <div id="exhibitionDetails"></div>
+
+    </dialog>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <h2>Inside <span>Track.</span></h2>
+
+                <p>
+                    A Digital Journalism Museum<br>
+                    Historical Coverage: 1993–2026
+                </p>
+
+            </div>
+
+            <div>
+
+                <a href="index.html">Home</a>
+
+                <a href="archive.html">Archive</a>
+
+                <a href="journalists.html">Journalists</a>
+
+                <a href="exhibitions.html">Exhibitions</a>
+
+                <a href="index.html#research">Research</a>
+
+                <a href="index.html#about">About</a>
+
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+
+            © 2026 Inside Track. All Rights Reserved.
+            | Founded by Meetu Jain
+
+        </div>
+
+    </footer>
+
+    <script src="theme-switcher.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Admin Dashboard | Inside Track</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+    <link rel="stylesheet" href="theme-switcher.css">
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-brand">
+                <a href="index.html">
+                    Inside <span>Track.</span>
+                </a>
+                <small>MUSEUM ADMINISTRATION</small>
+            </div>
+
+            <div class="admin-user">
+                <div class="user-avatar">MJ</div>
+                <div>
+                    <strong>Meetu Jain</strong>
+                    <small>Founder / Administrator</small>
+                </div>
+            </div>
+
+            <p class="menu-label">MAIN MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <button class="nav-item active"
+                    data-view="overview">
+                    <span>▦</span> Dashboard
+                </button>
+
+                <button class="nav-item"
+                    data-view="content">
+                    <span>▤</span> All Content
+                </button>
+
+                <button class="nav-item"
+                    data-view="archive">
+                    <span>▧</span> Historical Archive
+                </button>
+
+                <button class="nav-item"
+                    data-view="journalists">
+                    <span>♙</span> Journalists
+                </button>
+
+                <button class="nav-item"
+                    data-view="exhibitions">
+                    <span>▣</span> Exhibitions
+                </button>
+
+                <button class="nav-item"
+                    data-view="research">
+                    <span>▤</span> Research Library
+                </button>
+
+                <button class="nav-item"
+                    data-view="settings">
+                    <span>⚙</span> Settings
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html" target="_blank">
+                    ↗ View Public Website
+                </a>
+
+                <p>Inside Track CMS v1.0</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+
+            <header class="admin-header">
+
+                <button id="menuToggle"
+                    class="menu-toggle"
+                    aria-label="Toggle sidebar">
+                    ☰
+                </button>
+
+                <div>
+                    <p class="header-label">ADMINISTRATION PANEL</p>
+                    <h2 id="pageTitle">Dashboard Overview</h2>
+                </div>
+
+                <div class="header-actions">
+                    <span class="admin-status">
+                        ● Demo Mode
+                    </span>
+
+                    <a href="index.html" target="_blank">
+                        View Website ↗
+                    </a>
+                </div>
+
+            </header>
+
+
+            <!-- DASHBOARD VIEW -->
+
+            <section class="admin-view active"
+                id="view-overview">
+
+                <div class="welcome-section">
+                    <div>
+                        <p class="eyebrow">WELCOME BACK</p>
+                        <h1>Meetu Jain</h1>
+                        <p>
+                            Manage and preserve the history
+                            of journalism through Inside Track.
+                        </p>
+                    </div>
+
+                    <button class="primary-button"
+                        data-action="add-content">
+                        + Add New Content
+                    </button>
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="stats-grid">
+
+                    <article class="stat-card">
+                        <span>Total Content Records</span>
+                        <h2 id="totalRecords">0</h2>
+                        <small>All collections</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <span>Published Records</span>
+                        <h2 id="publishedRecords">0</h2>
+                        <small>Approved content</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <span>Draft Records</span>
+                        <h2 id="draftRecords">0</h2>
+                        <small>Awaiting publication</small>
+                    </article>
+
+                    <article class="stat-card">
+                        <span>Pending Verification</span>
+                        <h2 id="pendingRecords">0</h2>
+                        <small>Source verification required</small>
+                    </article>
+
+                </div>
+
+
+                <!-- COLLECTION OVERVIEW -->
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <p class="eyebrow">CONTENT MANAGEMENT</p>
+                            <h3>Manage Museum Collections</h3>
+                        </div>
+                    </div>
+
+                    <div class="collection-grid">
+
+                        <button data-section="archive">
+                            <span>01</span>
+                            <strong>Historical Archive</strong>
+                            <small>Reports and historical records</small>
+                        </button>
+
+                        <button data-section="journalists">
+                            <span>02</span>
+                            <strong>Journalist Profiles</strong>
+                            <small>Professional biographies</small>
+                        </button>
+
+                        <button data-section="exhibitions">
+                            <span>03</span>
+                            <strong>Multimedia Exhibitions</strong>
+                            <small>Photos, video and audio</small>
+                        </button>
+
+                        <button data-section="research">
+                            <span>04</span>
+                            <strong>Research Library</strong>
+                            <small>Papers and documents</small>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RECENT RECORDS -->
+
+                <div class="panel">
+
+                    <div class="panel-heading">
+                        <h3>Recently Added Records</h3>
+
+                        <button class="text-button"
+                            data-view="content">
+                            View All →
+                        </button>
+                    </div>
+
+                    <div id="recentRecords"
+                        class="recent-records">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTENT MANAGEMENT VIEW -->
+
+            <section class="admin-view"
+                id="view-content">
+
+                <div class="page-intro">
+                    <p class="eyebrow">CONTENT CONTROL CENTRE</p>
+                    <h1>All Content</h1>
+                    <p>
+                        Create, edit, review and manage museum records.
+                    </p>
+                </div>
+
+                <div class="panel">
+
+                    <div class="toolbar">
+
+                        <input type="search"
+                            id="adminSearch"
+                            placeholder="Search records...">
+
+                        <select id="adminFilter">
+                            <option value="all">All Collections</option>
+                            <option value="archive">Archive</option>
+                            <option value="journalists">Journalists</option>
+                            <option value="exhibitions">Exhibitions</option>
+                            <option value="research">Research</option>
+                        </select>
+
+                        <select id="statusFilter">
+                            <option value="all">All Statuses</option>
+                            <option value="Published">Published</option>
+                            <option value="Draft">Draft</option>
+                        </select>
+
+                        <button class="primary-button"
+                            data-action="add-content">
+                            + Add Record
+                        </button>
+
+                    </div>
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Collection</th>
+                                    <th>Year</th>
+                                    <th>Status</th>
+                                    <th>Verification</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="recordsTable">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    <p id="tableEmpty" class="table-empty" hidden>
+                        No records found.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- COLLECTION-SPECIFIC VIEWS -->
+
+            <section class="admin-view"
+                id="view-archive">
+                <div class="page-intro">
+                    <p class="eyebrow">COLLECTION MANAGEMENT</p>
+                    <h1>Historical Archive</h1>
+                    <p>Manage historical reports and journalism records.</p>
+                </div>
+                <div class="panel collection-panel">
+                    <button class="primary-button"
+                        data-action="add-content"
+                        data-type="archive">
+                        + Add Historical Record
+                    </button>
+                    <div id="archiveSummary"></div>
+                </div>
+            </section>
+
+
+            <section class="admin-view"
+                id="view-journalists">
+                <div class="page-intro">
+                    <p class="eyebrow">PEOPLE & PROFESSIONAL LEGACY</p>
+                    <h1>Journalist Management</h1>
+                    <p>Manage journalist biographies and career records.</p>
+                </div>
+                <div class="panel collection-panel">
+                    <button class="primary-button"
+                        data-action="add-content"
+                        data-type="journalists">
+                        + Add Journalist
+                    </button>
+                    <div id="journalistsSummary"></div>
+                </div>
+            </section>
+
+
+            <section class="admin-view"
+                id="view-exhibitions">
+                <div class="page-intro">
+                    <p class="eyebrow">MULTIMEDIA COLLECTION</p>
+                    <h1>Exhibition Management</h1>
+                    <p>Manage photographs, documentaries and audio exhibits.</p>
+                </div>
+                <div class="panel collection-panel">
+                    <button class="primary-button"
+                        data-action="add-content"
+                        data-type="exhibitions">
+                        + Add Exhibition
+                    </button>
+                    <div id="exhibitionsSummary"></div>
+                </div>
+            </section>
+
+
+            <section class="admin-view"
+                id="view-research">
+                <div class="page-intro">
+                    <p class="eyebrow">ACADEMIC DOCUMENTATION</p>
+                    <h1>Research Library</h1>
+                    <p>Manage research papers, publications and PDFs.</p>
+                </div>
+                <div class="panel collection-panel">
+                    <button class="primary-button"
+                        data-action="add-content"
+                        data-type="research">
+                        + Add Research Document
+                    </button>
+                    <div id="researchSummary"></div>
+                </div>
+            </section>
+
+
+            <!-- SETTINGS VIEW -->
+
+            <section class="admin-view"
+                id="view-settings">
+
+                <div class="page-intro">
+                    <p class="eyebrow">SYSTEM CONFIGURATION</p>
+                    <h1>Website Settings</h1>
+                    <p>Manage basic museum information.</p>
+                </div>
+
+                <div class="panel settings-panel">
+
+                    <h3>Museum Information</h3>
+
+                    <form id="settingsForm">
+
+                        <label>
+                            Museum Name
+                            <input type="text"
+                                id="museumName"
+                                value="Inside Track"
+                                required>
+                        </label>
+
+                        <label>
+                            Founder Name
+                            <input type="text"
+                                id="founderName"
+                                value="Meetu Jain"
+                                required>
+                        </label>
+
+                        <label>
+                            Historical Coverage Start
+                            <input type="number"
+                                id="startYear"
+                                value="1993"
+                                min="1900"
+                                max="2026"
+                                required>
+                        </label>
+
+                        <label>
+                            Historical Coverage End
+                            <input type="number"
+                                id="endYear"
+                                value="2026"
+                                min="1993"
+                                max="2100"
+                                required>
+                        </label>
+
+                        <button class="primary-button"
+                            type="submit">
+                            Save Settings
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ADD / EDIT CONTENT MODAL -->
+
+    <dialog id="contentModal" class="content-modal">
+
+        <div class="modal-heading">
+
+            <div>
+                <p class="eyebrow">MUSEUM CONTENT MANAGEMENT</p>
+                <h2 id="formTitle">Add New Record</h2>
+            </div>
+
+            <button type="button"
+                id="closeModal"
+                aria-label="Close">
+                &times;
+            </button>
+
+        </div>
+
+
+        <form id="contentForm">
+
+            <input type="hidden" id="recordId">
+
+            <label>
+                Collection Type
+                <select id="recordType" required>
+                    <option value="archive">Historical Archive</option>
+                    <option value="journalists">Journalist Profile</option>
+                    <option value="exhibitions">Multimedia Exhibition</option>
+                    <option value="research">Research Document</option>
+                </select>
+            </label>
+
+            <label>
+                Record Title
+                <input type="text"
+                    id="recordTitle"
+                    placeholder="Enter title"
+                    required>
+            </label>
+
+            <label>
+                Year
+                <input type="number"
+                    id="recordYear"
+                    min="1993"
+                    max="2026"
+                    required>
+            </label>
+
+            <label>
+                Author / Journalist / Creator
+                <input type="text"
+                    id="recordAuthor"
+                    placeholder="Enter verified name">
+            </label>
+
+            <label>
+                Publication / Organisation
+                <input type="text"
+                    id="recordPublication"
+                    placeholder="Enter publication name">
+            </label>
+
+            <label>
+                Category / Specialization
+                <input type="text"
+                    id="recordCategory"
+                    placeholder="Enter category">
+            </label>
+
+            <label>
+                Description
+                <textarea id="recordDescription"
+                    rows="4"
+                    placeholder="Enter record description"
+                    required></textarea>
+            </label>
+
+            <label>
+                Image URL
+                <input type="url"
+                    id="recordImage"
+                    placeholder="https://...">
+            </label>
+
+            <label>
+                Document / Media URL
+                <input type="url"
+                    id="recordMedia"
+                    placeholder="https://...">
+            </label>
+
+            <label>
+                Original Source URL
+                <input type="url"
+                    id="recordSource"
+                    placeholder="https://...">
+            </label>
+
+            <div class="form-row">
+
+                <label>
+                    Publication Status
+                    <select id="recordStatus">
+                        <option value="Draft">Draft</option>
+                        <option value="Published">Published</option>
+                    </select>
+                </label>
+
+                <label>
+                    Verification Status
+                    <select id="recordVerification">
+                        <option value="Pending">Pending</option>
+                        <option value="Verified">Verified</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <p class="form-note">
+                Only publish historical records after checking
+                their original sources and usage permissions.
+            </p>
+
+            <div class="form-actions">
+
+                <button type="button"
+                    id="cancelForm"
+                    class="secondary-button">
+                    Cancel
+                </button>
+
+                <button type="submit"
+                    class="primary-button">
+                    Save Record
+                </button>
+
+            </div>
+
+        </form>
+
+    </dialog>
+
+
+    <div id="toast" class="toast" role="status"
+        aria-live="polite"></div>
+
+    <script src="theme-switcher.js"></script>
+</body>
+</html>

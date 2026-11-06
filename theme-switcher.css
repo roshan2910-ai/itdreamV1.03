@@ -1,0 +1,87 @@
+/* Inside Track — unified three-theme system */
+:root {
+  --white: #F7F3EC;
+  --black: #342821;
+  --grey: #D8CFC3;
+  --light: #EEE6DA;
+  --light-grey: #EEE6DA;
+  --red: #9B5D45;
+  --muted: #76685D;
+  --text-grey: #76685D;
+  --surface: #FFFCF7;
+  --accent-soft: #E8D6C8;
+  color-scheme: light;
+}
+
+:root[data-theme="white-chocolate"] {
+  --white: #F7F3EC;
+  --black: #342821;
+  --grey: #D8CFC3;
+  --light: #EEE6DA;
+  --light-grey: #EEE6DA;
+  --red: #9B5D45;
+  --muted: #76685D;
+  --text-grey: #76685D;
+  --surface: #FFFCF7;
+  --accent-soft: #E8D6C8;
+}
+
+:root[data-theme="dutch-white"] {
+  --white: #F2F4EF;
+  --black: #26332F;
+  --grey: #D1D9D3;
+  --light: #E7ECE6;
+  --light-grey: #E7ECE6;
+  --red: #47766A;
+  --muted: #68756E;
+  --text-grey: #68756E;
+  --surface: #FBFCF9;
+  --accent-soft: #D9E5DE;
+}
+
+:root[data-theme="old-lace"] {
+  --white: #FDF5E6;
+  --black: #3B3028;
+  --grey: #DED2BC;
+  --light: #F3E9D7;
+  --light-grey: #F3E9D7;
+  --red: #9A6B35;
+  --muted: #786A58;
+  --text-grey: #786A58;
+  --surface: #FFFAF0;
+  --accent-soft: #EAD9B9;
+}
+
+body { background-color: var(--white); color: var(--black); }
+header, nav, .navbar, .site-header, .card, .modal-content, .modal, .dropdown-menu,
+.sidebar, .dashboard-card, .stat-card, .filter-panel, .document-card, .journalist-card,
+.exhibition-card, .archive-card {
+  border-color: var(--grey);
+}
+input, select, textarea {
+  background-color: var(--surface);
+  color: var(--black);
+  border-color: var(--grey);
+}
+button, .btn, .button, .primary-btn, .cta-button {
+  border-color: var(--red);
+}
+a { color: inherit; }
+#insideTrackThemeControl {
+  position: fixed; right: 18px; bottom: 18px; z-index: 99999;
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 12px; border: 1px solid var(--grey); border-radius: 999px;
+  background: var(--surface); color: var(--black);
+  box-shadow: 0 8px 28px rgba(0,0,0,.14);
+  font: 600 12px/1.2 Inter, Arial, sans-serif;
+}
+#insideTrackThemeControl label { white-space: nowrap; }
+#insideTrackThemeSelect {
+  max-width: 145px; padding: 6px 24px 6px 9px; border: 1px solid var(--grey);
+  border-radius: 999px; background: var(--white); color: var(--black);
+  font: 600 12px Inter, Arial, sans-serif; cursor: pointer;
+}
+@media (max-width: 520px) {
+  #insideTrackThemeControl { right: 10px; bottom: 10px; padding: 7px 9px; }
+  #insideTrackThemeControl label { display: none; }
+}

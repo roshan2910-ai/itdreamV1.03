@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore journalist biographies, career histories, investigative reporting and professional achievements at Inside Track.">
+
+    <title>Journalists | Inside Track Digital Journalism Museum</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="journalists.css">
+    <script src="journalists.js" defer></script>
+    <link rel="stylesheet" href="theme-switcher.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+        <div class="container">
+            INSIDE TRACK | DIGITAL JOURNALISM MUSEUM
+            <span>DOCUMENTING JOURNALISM FROM 1993–2026</span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+                Inside <span>Track.</span>
+                <small>DIGITAL JOURNALISM MUSEUM</small>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+            <a href="archive.html">Archive</a>	
+            <a href="journalists.html">Journalists</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="research.html">Research</a>
+                <a href="index.html#about">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="journalist-hero">
+            <div class="container">
+
+                <p class="eyebrow">THE PEOPLE BEHIND THE STORIES</p>
+
+                <h1>
+                    Voices That<br>
+                    <span>Shaped History.</span>
+                </h1>
+
+                <p>
+                    Discover the journalists whose reporting,
+                    investigations and professional contributions
+                    have helped shape public understanding.
+                    Explore their careers, publications and legacies.
+                </p>
+
+                <a href="#directory" class="primary-button">
+                    Explore Journalist Directory
+                </a>
+
+            </div>
+        </section>
+
+        <!-- INTRODUCTION -->
+
+        <section class="intro-section">
+            <div class="container intro-grid">
+
+                <div>
+                    <p class="eyebrow">BEYOND THE HEADLINES</p>
+                    <h2>Every Journalist Has a Story.</h2>
+                </div>
+
+                <p>
+                    Behind every important report is a journalist
+                    who researched, investigated, questioned and
+                    documented events. Inside Track aims to preserve
+                    these professional journeys for students,
+                    historians and future generations.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- DIRECTORY -->
+
+        <section class="directory-section" id="directory">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">THE JOURNALIST COLLECTION</p>
+                    <h2>Explore the Directory</h2>
+                    <p>
+                        Search journalist profiles by name,
+                        publication or area of specialization.
+                    </p>
+                </div>
+
+                <!-- SEARCH -->
+
+                <div class="directory-controls">
+
+                    <input
+                        type="search"
+                        id="journalistSearch"
+                        placeholder="Search journalist or publication..."
+                        aria-label="Search journalists"
+                    >
+
+                    <select id="specializationFilter"
+                        aria-label="Filter journalists by specialization">
+
+                        <option value="all">All Specializations</option>
+                        <option value="Investigative Journalism">Investigative Journalism</option>
+                        <option value="Political Journalism">Political Journalism</option>
+                        <option value="International Reporting">International Reporting</option>
+                        <option value="Business Journalism">Business Journalism</option>
+                        <option value="Broadcast Journalism">Broadcast Journalism</option>
+                        <option value="Photojournalism">Photojournalism</option>
+
+                    </select>
+
+                    <select id="journalistSort"
+                        aria-label="Sort journalist profiles">
+
+                        <option value="az">Name: A to Z</option>
+                        <option value="za">Name: Z to A</option>
+
+                    </select>
+
+                </div>
+
+                <!-- DIRECTORY RESULTS -->
+
+                <div class="directory-heading">
+
+                    <h3>Journalist Profiles</h3>
+
+                    <span id="profileCount">
+                        0 Profiles
+                    </span>
+
+                </div>
+
+                <div class="journalist-grid"
+                    id="journalistGrid">
+
+                    <!-- Profiles generated through JavaScript -->
+
+                </div>
+
+                <div id="noProfiles" class="no-profiles" hidden>
+
+                    <h3>No Profiles Found</h3>
+
+                    <p>
+                        Try another name or specialization.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CAREER MUSEUM -->
+
+        <section class="career-section">
+
+            <div class="container career-grid">
+
+                <div>
+                    <p class="eyebrow">PROFESSIONAL LEGACY</p>
+
+                    <h2>
+                        More Than a Career.<br>
+                        A Historical Record.
+                    </h2>
+
+                    <p>
+                        Explore how journalists develop their
+                        careers, contribute to publications,
+                        investigate important issues and
+                        influence the evolution of journalism.
+                    </p>
+                </div>
+
+                <div class="career-features">
+
+                    <div>
+                        <span>01</span>
+                        <h3>Career Timeline</h3>
+                        <p>Professional journey and career milestones.</p>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <h3>Published Reports</h3>
+                        <p>Important articles, investigations and reports.</p>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <h3>Awards & Recognition</h3>
+                        <p>Documented awards and professional achievements.</p>
+                    </div>
+
+                    <div>
+                        <span>04</span>
+                        <h3>Historical Contributions</h3>
+                        <p>Journalistic contributions and their historical context.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- EDITORIAL NOTE -->
+
+        <section class="editorial-note">
+
+            <div class="container">
+
+                <p class="eyebrow">OUR ARCHIVAL PRINCIPLE</p>
+
+                <h2>Preserve the Work.<br>Document the Legacy.</h2>
+
+                <p>
+                    Every journalist profile should be supported
+                    by reliable biographical information,
+                    publication records and verifiable sources.
+                    Historical accuracy remains central to
+                    the Inside Track collection.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JOURNALIST PROFILE MODAL -->
+
+    <dialog id="journalistModal" class="profile-modal">
+
+        <div class="modal-header">
+
+            <span class="eyebrow">JOURNALIST PROFILE</span>
+
+            <button id="closeProfile" aria-label="Close profile">
+                &times;
+            </button>
+
+        </div>
+
+        <div id="profileDetails"></div>
+
+    </dialog>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+                <h2>Inside <span>Track.</span></h2>
+
+                <p>
+                    A Digital Journalism Museum<br>
+                    Historical Coverage: 1993–2026
+                </p>
+            </div>
+
+            <div>
+                <a href="index.html">Home</a>
+                <a href="archive.html">Archive</a>
+                <a href="journalists.html">Journalists</a>
+                <a href="index.html#about">About</a>
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+            © 2026 Inside Track. All Rights Reserved.
+            | Founded by Meetu Jain
+        </div>
+
+    </footer>
+
+    <script src="theme-switcher.js"></script>
+</body>
+</html>

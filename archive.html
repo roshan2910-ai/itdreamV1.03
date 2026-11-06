@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore the Inside Track digital journalism archive from 1993 to 2026.">
+
+    <title>Historical Archive | Inside Track</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="archive.css">
+
+    <script src="archive.js" defer></script>
+    <link rel="stylesheet" href="theme-switcher.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>INSIDE TRACK DIGITAL JOURNALISM MUSEUM</span>
+            <span>HISTORICAL COVERAGE: 1993–2026</span>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+
+    <header class="header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+                Inside <span>Track.</span>
+                <small>DIGITAL JOURNALISM MUSEUM</small>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+            <a href="archive.html">Archive</a>	
+            <a href="journalists.html">Journalists</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="research.html">Research</a>
+                <a href="index.html#about">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PAGE INTRODUCTION -->
+
+        <section class="archive-hero">
+            <div class="container">
+
+                <p class="eyebrow">THE HISTORICAL COLLECTION</p>
+
+                <h1>
+                    The Journalism<br>
+                    <span>Archive.</span>
+                </h1>
+
+                <p class="intro-text">
+                    Explore three decades of journalism through
+                    historical reports, investigative stories,
+                    influential publications and important
+                    moments in media history.
+                </p>
+
+                <div class="archive-period">
+                    <span>1993</span>
+                    <div class="period-line"></div>
+                    <span>2026</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ARCHIVE STATISTICS -->
+
+        <section class="archive-stats">
+            <div class="container stats-grid">
+
+                <div>
+                    <h2>34</h2>
+                    <p>Archive Years</p>
+                </div>
+
+                <div>
+                    <h2>1993</h2>
+                    <p>Starting Year</p>
+                </div>
+
+                <div>
+                    <h2>2026</h2>
+                    <p>Latest Coverage Year</p>
+                </div>
+
+                <div>
+                    <h2>01</h2>
+                    <p>Historical Collection</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ARCHIVE SEARCH -->
+
+        <section class="archive-main">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">DISCOVER THE COLLECTION</p>
+                    <h2>Search Historical Records</h2>
+                    <p>
+                        Search by report title, journalist,
+                        publication, year or subject.
+                    </p>
+                </div>
+
+                <div class="search-panel">
+
+                    <input
+                        type="search"
+                        id="archiveSearch"
+                        placeholder="Search reports, journalists, publications..."
+                        aria-label="Search historical records"
+                    >
+
+                    <select id="categoryFilter"
+                        aria-label="Filter by category">
+
+                        <option value="all">All Categories</option>
+                        <option value="Politics">Politics</option>
+                        <option value="Investigative Journalism">Investigative Journalism</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Society">Society</option>
+                        <option value="Economy">Economy</option>
+                        <option value="International">International</option>
+                        <option value="Media History">Media History</option>
+
+                    </select>
+
+                    <select id="sortOrder" aria-label="Sort records">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+
+                </div>
+
+                <!-- YEAR FILTER -->
+
+                <div class="year-heading">
+                    <h3>Browse By Year</h3>
+                    <button id="allYears" class="clear-button">
+                        All Years
+                    </button>
+                </div>
+
+                <div class="year-selector" id="yearSelector">
+                    <!-- Years generated by JavaScript -->
+                </div>
+
+                <!-- RESULTS -->
+
+                <div class="results-heading">
+
+                    <div>
+                        <p class="eyebrow">ARCHIVE COLLECTION</p>
+                        <h2 id="resultsTitle">All Historical Records</h2>
+                    </div>
+
+                    <span id="resultCount">0 records</span>
+
+                </div>
+
+                <div id="archiveResults" class="records-grid">
+
+                    <!-- Archive records generated by JavaScript -->
+
+                </div>
+
+                <div id="emptyMessage" class="empty-message" hidden>
+                    <h3>No Records Found</h3>
+                    <p>
+                        Try another keyword, year or category.
+                    </p>
+                </div>
+
+                <!-- PAGINATION -->
+
+                <div class="pagination" id="pagination">
+
+                    <button id="previousPage" disabled>
+                        Previous
+                    </button>
+
+                    <span id="pageNumber">Page 1</span>
+
+                    <button id="nextPage">
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ARCHIVE INFORMATION -->
+
+        <section class="archive-note">
+
+            <div class="container note-content">
+
+                <p class="eyebrow">PRESERVING JOURNALISM</p>
+
+                <h2>
+                    Every Record Deserves<br>
+                    Its Place in History.
+                </h2>
+
+                <p>
+                    Inside Track aims to preserve historical
+                    journalism through carefully documented
+                    reports, publication references, journalist
+                    biographies and original source material.
+                </p>
+
+                <a href="index.html#about" class="button">
+                    About Inside Track
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- REPORT DETAIL MODAL -->
+
+    <dialog id="reportModal" class="report-modal">
+
+        <div class="modal-header">
+
+            <span class="eyebrow">ARCHIVE RECORD</span>
+
+            <button id="closeModal" aria-label="Close report">
+                &times;
+            </button>
+
+        </div>
+
+        <div id="modalContent"></div>
+
+    </dialog>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+                <h2>Inside <span>Track.</span></h2>
+                <p>
+                    A Digital Journalism Museum<br>
+                    Historical Coverage: 1993–2026
+                </p>
+            </div>
+
+            <div>
+                <a href="index.html">Home</a>
+                <a href="archive.html">Archive</a>
+                <a href="journalists.html">Journalists</a>
+                <a href="index.html#about">About</a>
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+            © 2026 Inside Track. All Rights Reserved.
+            | Founded by Meetu Jain
+        </div>
+
+    </footer>
+
+    <script src="theme-switcher.js"></script>
+</body>
+</html>

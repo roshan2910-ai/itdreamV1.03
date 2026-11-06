@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Explore historical research papers, journalism reports, newspaper archives and digital documents at Inside Track.">
+
+    <title>Research Library | Inside Track</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="research.css">
+    <script src="research.js" defer></script>
+    <link rel="stylesheet" href="theme-switcher.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span>INSIDE TRACK | DIGITAL JOURNALISM MUSEUM</span>
+            <span>RESEARCH & DOCUMENTATION | 1993–2026</span>
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+                Inside <span>Track.</span>
+                <small>DIGITAL JOURNALISM MUSEUM</small>
+            </a>
+
+            <nav aria-label="Main navigation">
+
+                <a href="index.html">Home</a>
+            <a href="archive.html">Archive</a>	
+            <a href="journalists.html">Journalists</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="research.html">Research</a>
+                <a href="index.html#about">About</a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="research-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    KNOWLEDGE • HISTORY • DOCUMENTATION
+                </p>
+
+                <h1>
+                    Research Beyond<br>
+                    <span>The Headlines.</span>
+                </h1>
+
+                <p>
+                    Explore a dedicated digital research library
+                    preserving historical journalism documents,
+                    publications, research papers and reference
+                    materials from 1993 to 2026.
+                </p>
+
+                <a href="#library" class="primary-button">
+                    Explore Research Library
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIBRARY STATISTICS -->
+
+        <section class="research-stats">
+
+            <div class="container stats-grid">
+
+                <div>
+                    <h2>01</h2>
+                    <p>Research Library</p>
+                </div>
+
+                <div>
+                    <h2>02</h2>
+                    <p>Historical Documents</p>
+                </div>
+
+                <div>
+                    <h2>03</h2>
+                    <p>Academic Resources</p>
+                </div>
+
+                <div>
+                    <h2>34</h2>
+                    <p>Years Covered</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="research-intro">
+
+            <div class="container intro-grid">
+
+                <div>
+
+                    <p class="eyebrow">
+                        THE DOCUMENTATION CENTRE
+                    </p>
+
+                    <h2>
+                        Preserving Knowledge.<br>
+                        Supporting Research.
+                    </h2>
+
+                </div>
+
+                <p>
+                    The Inside Track Research Library is designed
+                    to provide access to documented historical
+                    materials and reliable reference resources.
+
+                    It aims to support academic study, historical
+                    investigation and professional media research.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- LIBRARY -->
+
+        <section class="library-section" id="library">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        DIGITAL DOCUMENTATION CENTRE
+                    </p>
+
+                    <h2>Explore the Research Library</h2>
+
+                    <p>
+                        Discover documents by title, author,
+                        publication, subject and year.
+                    </p>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="library-search">
+
+                    <input
+                        type="search"
+                        id="documentSearch"
+                        placeholder="Search documents, authors, publications..."
+                        aria-label="Search research documents"
+                    >
+
+                    <select id="documentCategory"
+                        aria-label="Filter document category">
+
+                        <option value="all">All Document Types</option>
+
+                        <option value="Research Paper">Research Papers</option>
+
+                        <option value="Historical Report">Historical Reports</option>
+
+                        <option value="Newspaper">Newspapers</option>
+
+                        <option value="Academic Publication">Academic Publications</option>
+
+                        <option value="Media Study">Media Studies</option>
+
+                        <option value="Reference Material">Reference Materials</option>
+
+                    </select>
+
+                    <select id="documentYear"
+                        aria-label="Filter by year">
+
+                        <option value="all">All Years</option>
+
+                        <option value="1993">1993–1999</option>
+
+                        <option value="2000">2000–2009</option>
+
+                        <option value="2010">2010–2019</option>
+
+                        <option value="2020">2020–2026</option>
+
+                    </select>
+
+                    <select id="documentSort"
+                        aria-label="Sort documents">
+
+                        <option value="newest">Newest First</option>
+
+                        <option value="oldest">Oldest First</option>
+
+                        <option value="az">Title A–Z</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DOCUMENT RESULTS -->
+
+                <div class="library-heading">
+
+                    <div>
+                        <p class="eyebrow">DOCUMENT COLLECTION</p>
+                        <h3>Research & Historical Records</h3>
+                    </div>
+
+                    <span id="documentCount">0 Documents</span>
+
+                </div>
+
+
+                <div class="document-grid" id="documentGrid">
+
+                    <!-- Documents generated by JavaScript -->
+
+                </div>
+
+
+                <!-- EMPTY MESSAGE -->
+
+                <div id="emptyDocuments" class="empty-message" hidden>
+
+                    <h3>No Documents Found</h3>
+
+                    <p>
+                        Try a different keyword, category or year.
+                    </p>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="pagination" id="pagination">
+
+                    <button id="previousPage" disabled>
+                        Previous
+                    </button>
+
+                    <span id="pageNumber">Page 1</span>
+
+                    <button id="nextPage">
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESEARCH GUIDELINES -->
+
+        <section class="guidelines-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        RESEARCH & REFERENCE
+                    </p>
+
+                    <h2>Using the Research Library</h2>
+
+                </div>
+
+
+                <div class="guideline-grid">
+
+                    <article>
+                        <span>01</span>
+                        <h3>Find Original Sources</h3>
+                        <p>
+                            Consult original publications and
+                            historical references wherever available.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span>02</span>
+                        <h3>Verify Information</h3>
+                        <p>
+                            Check publication dates, authorship
+                            and source authenticity.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span>03</span>
+                        <h3>Cite Your Research</h3>
+                        <p>
+                            Maintain appropriate citations
+                            when using historical materials.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT RESEARCH LIBRARY -->
+
+        <section class="research-note">
+
+            <div class="container note-content">
+
+                <p class="eyebrow">
+                    INSIDE TRACK RESEARCH MISSION
+                </p>
+
+                <h2>
+                    History Must Be Preserved.<br>
+                    Knowledge Must Be Accessible.
+                </h2>
+
+                <p>
+                    Inside Track aims to create a reliable
+                    documentation centre for journalism history.
+                    Every record should retain its source,
+                    publication details and historical context.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- DOCUMENT DETAIL MODAL -->
+
+    <dialog id="documentModal" class="document-modal">
+
+        <div class="modal-header">
+
+            <span class="eyebrow">
+                RESEARCH DOCUMENT
+            </span>
+
+            <button id="closeDocument"
+                aria-label="Close document">
+                &times;
+            </button>
+
+        </div>
+
+        <div id="documentDetails"></div>
+
+    </dialog>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div>
+
+                <h2>Inside <span>Track.</span></h2>
+
+                <p>
+                    A Digital Journalism Museum<br>
+                    Historical Coverage: 1993–2026
+                </p>
+
+            </div>
+
+            <div>
+
+                <a href="index.html">Home</a>
+                <a href="archive.html">Archive</a>
+                <a href="journalists.html">Journalists</a>
+                <a href="exhibitions.html">Exhibitions</a>
+                <a href="research.html">Research</a>
+
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+            © 2026 Inside Track. All Rights Reserved.
+            | Founded by Meetu Jain
+        </div>
+
+    </footer>
+
+    <script src="theme-switcher.js"></script>
+</body>
+</html>
